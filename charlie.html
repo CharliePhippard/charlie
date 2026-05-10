@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Charlie Phippard</title>
+
+<style>
+    /* Impact font */
+    @font-face {
+        font-family: 'ImpactCustom';
+        src: url('fonts/impact.ttf') format('truetype');
+    }
+
+    /* Arial custom font */
+    @font-face {
+        font-family: 'ArialCustom';
+        src: url('fonts/ARIAL.TTF') format('truetype');
+    }
+
+    body {
+        margin: 0;
+        background: #040404;
+    }
+
+    /* Banner */
+    .banner {
+        position: relative;
+        width: 100%;
+    }
+
+    /* IMAGE PROTECTION */
+    .banner img {
+        width: 100%;
+        height: auto;
+        display: block;
+
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+
+        pointer-events: none;
+        -webkit-user-drag: none;
+        user-drag: none;
+    }
+
+    /* TEXT CONTAINER */
+    .banner-text {
+        position: absolute;
+        top: 45%;
+        left: clamp(20px, 4vw, 100px);
+        transform: translateY(-50%);
+        color: white;
+    }
+
+    /* MAIN TITLE */
+    .banner-text .title {
+        font-family: 'ImpactCustom', Impact, sans-serif;
+        font-size: clamp(28px, 3.0vw, 60px);
+        letter-spacing: 2px;
+        line-height: 0.9;
+    }
+
+    /* SUBTITLE */
+    .banner-text .subtitle {
+        font-family: 'ArialCustom', Arial, sans-serif;
+        font-size: clamp(10px, 1vw, 16px);
+        letter-spacing: 2px;
+        margin-top: 10px;
+        opacity: 0.9;
+    }
+</style>
+</head>
+
+<body oncontextmenu="return false;">
+
+<div class="banner">
+    <img src="assets/banner.png" alt="Banner">
+
+    <div class="banner-text">
+        <div class="title">Charlie Phippard</div>
+        <div class="subtitle">Photography</div>
+    </div>
+</div>
+
+<script>
+    // Disable right-click (context menu)
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+    });
+</script>
+
+</body>
+</html>
